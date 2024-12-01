@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aharn's Food - Order</title>
+    <link rel="stylesheet" href="order.css">
+    <script src="https://kit.fontawesome.com/32534064f8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar Section -->
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="index.html" id="navbar__logo">
+            <i class="fa-solid fa-burger"></i> Aharn's Food
+        </a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a href="Home.html" class="navbar__links">Home</a></li>
+            <li class="navbar__item"><a href="menu.html" class="navbar__links">Menu</a></li>
+            <li class="navbar__item"><a href="dealsandoffer.html" class="navbar__links">Deals and Offer</a></li>
+            <li class="navbar__item"><a href="order.html" class="navbar__links">Order</a></li>
+            <li class="navbar__btn"><a href="signup.html" class="button">Sign Up</a></li>
+        </ul>  
+    </div>
+</nav>
+
+<!-- Order Section -->
+<div class="order__container">
+    <h1 class="menu__title">Place Your Order</h1>
+    <p class="menu__description">Browse and add your favorites to the cart!</p>
+
+    <div class="menu__container">
+        <!-- Menu Category 1 - Burgers -->
+        <div class="menu__category">
+            <h2>Burgers</h2>
+            <div class="menu__items">
+                <div class="menu__item">
+                    <img src="burger1.jpg" alt="Classic Cheeseburger">
+                    <h3>Classic Cheeseburger</h3>
+                    <p>A timeless delight with melted cheese and fresh toppings.</p>
+                    <span>$8.99</span>
+                    <button class="menu__btn add-to-cart" data-name="Classic Cheeseburger" data-price="8.99">Add to Cart</button>
+                </div>
+                <div class="menu__item">
+                    <img src="burger2.jpg" alt="Spicy Jalapeño Burger">
+                    <h3>Spicy Jalapeño Burger</h3>
+                    <p>For those who like it hot, with jalapeños and spicy sauce.</p>
+                    <span>$9.49</span>
+                    <button class="menu__btn add-to-cart" data-name="Spicy Jalapeño Burger" data-price="9.49">Add to Cart</button>
+                </div>
+                <div class="menu__item">
+                    <img src="burger3.jpg" alt="BBQ Bacon Burger">
+                    <h3>BBQ Bacon Burger</h3>
+                    <p>Juicy patty with crispy bacon and smoky BBQ sauce.</p>
+                    <span>$10.49</span>
+                    <button class="menu__btn add-to-cart" data-name="BBQ Bacon Burger" data-price="10.49">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Category 2 - Pizza -->
+        <div class="menu__category">
+            <h2>Pizza</h2>
+            <div class="menu__items">
+                <div class="menu__item">
+                    <img src="pizza1.jpg" alt="Margherita Pizza">
+                    <h3>Margherita Pizza</h3>
+                    <p>Fresh tomatoes, mozzarella, and basil on a crispy crust.</p>
+                    <span>$12.99</span>
+                    <button class="menu__btn add-to-cart" data-name="Margherita Pizza" data-price="12.99">Add to Cart</button>
+                </div>
+                <div class="menu__item">
+                    <img src="pizza2.jpg" alt="Pepperoni Pizza">
+                    <h3>Pepperoni Pizza</h3>
+                    <p>Loaded with pepperoni and cheesy goodness.</p>
+                    <span>$13.99</span>
+                    <button class="menu__btn add-to-cart" data-name="Pepperoni Pizza" data-price="13.99">Add to Cart</button>
+                </div>
+                <div class="menu__item">
+                    <img src="pizza3.jpg" alt="Vegetarian Pizza">
+                    <h3>Vegetarian Pizza</h3>
+                    <p>Fresh veggies, mozzarella, and a tangy tomato sauce.</p>
+                    <span>$14.49</span>
+                    <button class="menu__btn add-to-cart" data-name="Vegetarian Pizza" data-price="14.49">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Category 3 - Drinks -->
+        <div class="menu__category">
+            <h2>Drinks</h2>
+            <div class="menu__items">
+                <div class="menu__item">
+                    <img src="drink1.jpg" alt="Iced Lemonade">
+                    <h3>Iced Lemonade</h3>
+                    <p>Cool, refreshing, and perfect for any meal.</p>
+                    <span>$3.49</span>
+                    <button class="menu__btn add-to-cart" data-name="Iced Lemonade" data-price="3.49">Add to Cart</button>
+                </div>
+                <div class="menu__item">
+                    <img src="drink2.jpg" alt="Classic Milkshake">
+                    <h3>Classic Milkshake</h3>
+                    <p>Choose from vanilla, chocolate, or strawberry.</p>
+                    <span>$4.49</span>
+                    <button class="menu__btn add-to-cart" data-name="Classic Milkshake" data-price="4.49">Add to Cart</button>
+                </div>
+                <div class="menu__item">
+                    <img src="drink3.jpg" alt="Sparkling Water">
+                    <h3>Sparkling Water</h3>
+                    <p>Refreshing and bubbly for a light, crisp taste.</p>
+                    <span>$2.99</span>
+                    <button class="menu__btn add-to-cart" data-name="Sparkling Water" data-price="2.99">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Category 4 - Appetizers -->
+        <div class="menu__category">
+            <h2>Appetizers</h2>
+            <div class="menu__items">
+                <div class="menu__item">
+                    <img src="appetizer1.jpg" alt="Garlic Bread">
+                    <h3>Garlic Bread</h3>
+                    <p>Buttery and garlicky, perfect for sharing.</p>
+                    <span>$4.99</span>
+                    <button class="menu__btn add-to-cart" data-name="Garlic Bread" data-price="4.99">Add to Cart</button>
+                </div>
+                <div class="menu__item">
+                    <img src="appetizer2.jpg" alt="Mozzarella Sticks">
+                    <h3>Mozzarella Sticks</h3>
+                    <p>Crispy on the outside, gooey on the inside.</p>
+                    <span>$5.49</span>
+                    <button class="menu__btn add-to-cart" data-name="Mozzarella Sticks" data-price="5.49">Add to Cart</button>
+                </div>
+                <div class="menu__item">
+                    <img src="appetizer3.jpg" alt="Onion Rings">
+                    <h3>Onion Rings</h3>
+                    <p>Crunchy, golden, and savory.</p>
+                    <span>$4.49</span>
+                    <button class="menu__btn add-to-cart" data-name="Onion Rings" data-price="4.49">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+<!-- Menu Category 5 - Deals and Offers -->
+<div class="menu__category">
+    <h2>Deals and Offers</h2>
+    <div class="menu__items">
+        <!-- Family Combo Deal -->
+        <div class="menu__item deal-item">
+            <img src="deal1.jpg" alt="Family Combo Deal">
+            <h3>Family Combo Deal</h3>
+            <p>Great for the whole family! Get a variety of dishes at a special price.</p>
+            <span>$15.00</span>
+            <button class="menu__btn add-to-cart" data-name="Family Combo Deal" data-price="15.00">Add to Cart</button>
+        </div>
+        <!-- Meal for 2 Deal -->
+        <div class="menu__item deal-item">
+            <img src="deal2.jpg" alt="Meal for 2 Deal">
+            <h3>Buy 1 Get 1 Free</h3>
+            <p>Tasty Drinks at Double the Reward.</p>
+            <span>$5.00</span>
+            <button class="menu__btn add-to-cart" data-name="Meal for 2 Deal" data-price="5.00">Add to Cart</button>
+        </div>
+        <!-- New Deal 1 - Super Saver Combo -->
+        <div class="menu__item deal-item">
+            <img src="deal3.jpg" alt="Super Saver Combo">
+            <h3>Super Saver Combo</h3>
+            <p>Enjoy a delicious combo meal  inclusive of 2 drinks of your choice at an unbeatable price.</p>
+            <span>$10.00</span>
+            <button class="menu__btn add-to-cart" data-name="Super Saver Combo" data-price="10.00">Add to Cart</button>
+        </div>
+        <!-- New Deal 2 - Party Pack Deal -->
+        <div class="menu__item deal-item">
+            <img src="deal4.jpg" alt="Party Pack Deal">
+            <h3>Sweet Treat</h3>
+            <p>The perfect deal for parties. Get more food at a discounted price.</p>
+            <span>$5.00</span>
+            <button class="menu__btn add-to-cart" data-name="Sweet Treat" data-price="5.00">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+      
+    </div>
+</div>
+
+<!-- Order Summary Section -->
+<div class="order-summary">
+    <div class="order-summary__container">
+    <h2>Order Summary</h2>
+    <div id="cart-items-container">
+    <!-- Cart items will be dynamically inserted here -->
+    </div>
+    <div class="cart-summary-container">
+    <div class="cart-summary">
+    <p>Total Items: <span id="total-items">0</span></p>
+    <p>Total Cost: <span id="total-cost">$0.00</span></p>
+    </div>
+    </div>
+    </div>
+    </div>
+     <h2>Payment Method</h2>
+        <div class="payment-method">
+            <label>
+                <input type="radio" name="payment-method" value="credit-card" id="credit-card" checked>
+                Credit Card
+            </label>
+            <label>
+                <input type="radio" name="payment-method" value="paypal" id="paypal">
+                PayPal
+            </label>
+            <label>
+                <input type="radio" name="payment-method" value="cash" id="cash">
+                Cash on Delivery
+            </label>
+        </div>
+
+        <div class="payment-summary">
+            <a href="payment-success.html">
+                <button id="proceed-payment" class="button">Proceed to Payment</button>
+            </a>
+        </div>
+        
+           
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+

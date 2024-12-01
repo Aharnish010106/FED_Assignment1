@@ -1,0 +1,609 @@
+/* General Styles */
+body {
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #fff;
+    line-height: 1.8;
+}
+
+/* Logo Styles */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.logo-container {
+    transform: rotate(-15deg); /* Slant the logo */
+}
+
+.logo {
+    max-width: 300px; /* Adjust based on your logo size */
+    height: auto;
+}
+
+/* Signup Form Section */
+.signup__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 2rem;
+}
+
+.signup__form {
+    background-color: #222;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.signup__form h2 {
+    color: #ff8177;
+    margin-bottom: 2rem;
+}
+
+.signup__form input {
+    width: 100%;
+    padding: 1.4rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.signup__form .signup__btn {
+    padding: 1.4rem 3.2rem;
+    background: #f77062;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+.signup__form .signup__btn:hover {
+    background: #487ff4;
+}
+
+/* Footer Section */
+.footer__container {
+    background: #141414;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__container p {
+    color: #fff;
+    margin: 1rem;
+}
+
+.footer__container a {
+    color: #f77062;
+    text-decoration: none;
+}
+
+.footer__container a:hover {
+    color: #487ff4;
+}
+
+/* Navbar Styling (Same as in Menu Page) */
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: fixed; /* Fixed to the viewport */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    width: auto; /* Auto width to allow the navbar to take its natural width */
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 1;
+    width: auto;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0;
+}
+
+#navbar__logo {
+    background-color: blue;
+    background-image: linear-gradient(to top, #ff0813 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+
+.button:hover {
+    background: #487ff4;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #f77062;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Styles (Same as in Menu Page) */
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active {
+        top: 100%;
+        opacity: 1;
+        transition: all 0.4s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle.bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+/* General Styles */
+body {
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #fff;
+    line-height: 1.8;
+    display: flex; /* Flexbox to align the content */
+    justify-content: center; /* Horizontally center */
+    height: 100vh; /* Full height of the viewport */
+    padding-top: 10vh; /* Push the content upwards by 10% of the viewport height */
+}
+
+/* Signup Form Section */
+.signup__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it fills the screen */
+    width: 100%; /* Full width */
+    padding: 2rem;
+}
+
+.signup__form {
+    background-color: #222;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.signup__form h2 {
+    color: #ff8177;
+    margin-bottom: 2rem;
+}
+
+.signup__form input {
+    width: 100%;
+    padding: 1.4rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.signup__form .signup__btn {
+    padding: 1.4rem 3.2rem;
+    background: #f77062;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+.signup__form .signup__btn:hover {
+    background: #487ff4;
+}
+
+/* Footer Section */
+.footer__container {
+    background: #141414;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 5rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer__container p {
+    color: #fff;
+    margin: 1rem;
+}
+
+.footer__container a {
+    color: #f77062;
+    text-decoration: none;
+}
+
+.footer__container a:hover {
+    color: #487ff4;
+}
+
+/* Navbar Styling (Same as in Menu Page) */
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: fixed; /* Fixed to the viewport */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    width: auto; /* Auto width to allow the navbar to take its natural width */
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 1;
+    width: auto;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0;
+}
+
+#navbar__logo {
+    background-color: blue;
+    background-image: linear-gradient(to top, #ff0813 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+
+.button:hover {
+    background: #487ff4;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #f77062;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Styles (Same as in Menu Page) */
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active {
+        top: 100%;
+        opacity: 1;
+        transition: all 0.4s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle.bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+/* Signup Form Section */
+.signup__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it fills the screen */
+    width: 100%; /* Full width */
+    padding: 2rem;
+}
+
+.signup__form {
+    background-color: #222;
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    max-width: 700px; /* Increased width for the form */
+    width: 100%; /* Ensures the form fills the max-width */
+    text-align: center;
+}
+
+.signup__form h2 {
+    color: #ff8177;
+    margin-bottom: 2rem;
+}
+
+.signup__form input {
+    width: 100%;
+    padding: 1.4rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.signup__form .signup__btn {
+    padding: 1.4rem 3.2rem;
+    background: #f77062;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+.signup__form .signup__btn:hover {
+    background: #487ff4;
+}
+

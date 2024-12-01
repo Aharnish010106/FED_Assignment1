@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aharn's Food - Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+    <script src="https://kit.fontawesome.com/32534064f8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navbar Section -->
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="index.html" id="navbar__logo"><i class="fa-solid fa-burger"></i> Aharn's Food</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="Home.html" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="menu.html" class="navbar__links">Menu</a>
+            </li>
+            <li class="navbar__item">
+                <a href="deals.html" class="navbar__links">Deals and Offer</a>
+            </li>
+            <li class="navbar__item">
+                <a href="order.html" class="navbar__links">Order</a>
+            </li>
+            <li class="navbar__btn">
+                <a href="signup.html" class="button">Sign Up</a>
+            </li>
+        </ul>  
+    </div>
+</nav>
+
+<!-- Sign Up Section -->
+<div class="signup">
+    <h1 class="signup__title">Create Your Account</h1>
+    <p class="signup__description">Join Aharn's Food and enjoy exclusive offers, deals, and much more!</p>
+    <div class="signup__form">
+        <form action="/" method="post">
+            <div class="form__group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form__group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form__group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form__group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+            <div class="form__group">
+                <button type="submit" class="btn__submit">Sign Up</button>
+            </div>
+        </form>
+        <p class="signup__login-link">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__links--wrapper">
+            <div class="footer__links--items">
+                <h2>About Us</h2>
+                <a href="/">How it Works</a>
+                <a href="/">Testimonials</a>
+                <a href="/">Careers</a>
+                <a href="/">Investments</a>
+                <a href="/">Terms of Service</a>
+            </div>
+            <div class="footer__links--items">
+                <h2>Contact Us</h2>
+                <a href="/">Contact Support</a>
+                <a href="/">Locations</a>
+                <a href="/">FAQs</a>
+                <a href="/">Feedback</a>
+            </div>
+        </div>
+    </div>
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+                <a href="/" id="footer__logo"><i class="fa-solid fa-burger"></i> Aharn's Food</a>
+            </div>
+            <p class="website__rights">Aharn's Food 2024. All rights reserved.</p>
+            <div class="social__icons">
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="/" class="social__icon--link" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

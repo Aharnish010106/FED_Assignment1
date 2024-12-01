@@ -1,0 +1,465 @@
+/* General Styles */
+body {
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #fff;
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: blueviolet;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+    color: #ff8177;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.9rem;
+    margin: 2rem 0;
+}
+
+/* Logo Styles */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.logo-container {
+    transform: rotate(-15deg); /* Slant the logo */
+}
+
+.logo {
+    max-width: 300px; /* Adjust based on your logo size */
+    height: auto;
+}
+
+/* Menu Section */
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5rem 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.menu__category {
+    flex: 0 0 30%; /* Set each category to take up 30% of the container */
+    text-align: center;
+    padding: 2rem;
+}
+
+.menu__category.burger {
+    text-align: left;
+    padding-left: 3rem;
+}
+
+.menu__category.pizza {
+    text-align: center;
+}
+
+.menu__category.drinks {
+    text-align: right;
+    padding-right: 3rem;
+}
+
+.menu__category.appetizer {
+    text-align: center;
+    padding: 2rem;
+}
+
+.menu__item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    text-align: center;
+    padding: 3rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.menu__item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.menu__item img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+}
+
+.menu__item h3 {
+    color: #ff8177;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+}
+
+.menu__item p {
+    font-size: 1.3rem;
+    color: #ccc;
+    margin: 1.5rem 0;
+}
+
+.menu__item .price {
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.menu__item .menu__btn {
+    background: #f77062;
+    color: #fff;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.menu__item .menu__btn:hover {
+    background: #487ff4;
+}
+
+/* About Us Section */
+.about__container {
+    background-color: #131313;
+    padding: 5rem 2rem;
+    text-align: center;
+    max-width: 1400px;
+    margin: 5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about__container h2 {
+    color: #ff8177;
+    margin-bottom: 2rem;
+}
+
+.about__container p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #ccc;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Contact Us Section */
+.contact__container {
+    background-color: #131313;
+    padding: 5rem 2rem;
+    text-align: center;
+    max-width: 1400px;
+    margin: 5rem auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact__container h2 {
+    color: #ff8177;
+    margin-bottom: 2rem;
+}
+
+.contact__form {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.contact__form input, .contact__form textarea {
+    width: 100%;
+    padding: 1.4rem;
+    margin: 0.6rem 0;
+    border: none;
+    border-radius: 4px;
+    background: #222;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.contact__form textarea {
+    height: 180px;
+}
+
+.contact__form .contact__btn {
+    padding: 1.4rem 3.2rem;
+    background: #f77062;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.contact__form .contact__btn:hover {
+    background: #487ff4;
+}
+
+/* Footer */
+.footer__container {
+    background: #141414;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 5rem;
+}
+
+.footer__container p {
+    color: #fff;
+    margin: 1rem;
+}
+
+.footer__container a {
+    color: #f77062;
+    text-decoration: none;
+}
+
+.footer__container a:hover {
+    color: #487ff4;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu__category {
+        flex: unset;
+        padding: 2rem 0;
+    }
+
+    .menu__category.burger, 
+    .menu__category.pizza,
+    .menu__category.drinks,
+    .menu__category.appetizer {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .menu__item img {
+        height: 220px;
+    }
+
+    .contact__form input, .contact__form textarea {
+        padding: 1rem;
+    }
+
+    .contact__form .contact__btn {
+        padding: 1rem 2.5rem;
+    }
+}
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: fixed; /* Fixed to the viewport */
+    top: 0; /* Align to the top */
+    right: 0; /* Align to the right */
+    width: auto; /* Auto width to allow the navbar to take its natural width */
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    z-index: 1;
+    width: auto;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0;
+}
+
+#navbar__logo {
+    background-color: blue;
+    background-image: linear-gradient(to top, #ff0813 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #f77062;
+    color: #fff;
+}
+
+.button:hover {
+    background: #487ff4;
+    transition: all 0.3s ease;
+}
+
+.navbar__links:hover {
+    color: #f77062;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 960px) {
+    .navbar__container {
+        padding: 0;
+    }
+
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active {
+        top: 100%;
+        opacity: 1;
+        transition: all 0.4s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle.bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__item {
+        width: 100%;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

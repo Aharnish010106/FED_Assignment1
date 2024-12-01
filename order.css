@@ -1,0 +1,559 @@
+/* General Styles */
+body {
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #fff;
+    line-height: 1.8;
+}
+
+/* Title and Description */
+h1, h2 {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: blueviolet;
+}
+
+h2 {
+    font-size: 2.8rem;
+    color: #ff8177;
+}
+
+/* Order Page Container */
+.order__container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Menu Section */
+.menu__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.menu__category {
+    width: 48%;
+    text-align: center;
+}
+
+.menu__item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    margin: 1rem 0;
+    transition: transform 0.3s ease;
+}
+
+.menu__item:hover {
+    transform: translateY(-10px);
+}
+
+.menu__item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+}
+
+.menu__item h3 {
+    font-size: 1.8rem;
+    color: #ff8177;
+    margin-bottom: 0.5rem;
+}
+
+.menu__item p {
+    font-size: 1.3rem;
+    color: #ccc;
+    margin: 0.5rem 0;
+}
+
+.menu__item .price {
+    font-size: 1.6rem;
+    color: #fff;
+    margin: 1.5rem 0;
+}
+
+.menu__item .menu__btn {
+    background: #f77062;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu__item .menu__btn:hover {
+    background: #487ff4;
+}
+
+/* Cart Section */
+.cart__container, .payment__container {
+    background-color: #131313;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 3rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cart__items, .payment__methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+.cart__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+}
+
+.cart__item h3, .cart__item .item-price, .payment__method p {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.cart__total, .payment__summary, .checkout-btn {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.checkout-btn {
+    background: #f77062;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background: #487ff4;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #131313;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end; /* Align navbar to the right */
+    align-items: center; /* Center vertically */
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding-right: 20px; /* Add some padding to the right */
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    height: 80px;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: 0;
+}
+
+/* If you want to keep the logo on the left and only move the menu to the right: */
+#navbar__logo {
+    flex-grow: 1; /* Push logo to the left */
+}
+
+
+#navbar__logo {
+    background-color: blue;
+    background-image: linear-gradient(to top, #ff0813 0%, #ffb199 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item {
+    height: 80px;
+}
+
+.navbar__links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+.navbar__btn .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background: #f77062;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.navbar__links:hover, .button:hover {
+    background: #487ff4;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 960px) {
+    .navbar__menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active {
+        top: 100%;
+        opacity: 1;
+        z-index: 99;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo {
+        padding-left: 25px;
+    }
+
+    .navbar__toggle.bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+
+    .navbar__links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .button {
+        width: 80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(5%, 20%);
+    }
+
+    .navbar__toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+    .menu__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu__category {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .checkout-btn {
+        width: 80%;
+    }
+
+/* Footer */
+footer {
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+}
+
+.footer__right a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.footer__right a:hover {
+    text-decoration: underline;
+}
+
+/* Menu Category */
+.menu__category {
+    margin-bottom: 40px;
+    padding: 40px 0;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 1 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu__category h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+.menu__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 100px;
+    justify-items: center;
+    padding: 1 50px;
+}
+
+/* Menu Item */
+.menu__item {
+    background-color: #ffffff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 250px;
+}
+
+.menu__item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.menu__item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.menu__item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.menu__item p {
+    font-size: 14px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.menu__item span {
+    font-size: 18px;
+    color:black;
+    margin-bottom: 20px;
+}
+
+.menu__btn {
+    background-color: #ff5a5f;
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu__btn:hover {
+    background-color: #ff3b3f;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .menu__items {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .menu__category h2 {
+        font-size: 24px;
+    }
+
+    .menu__item {
+        max-width: 100%;
+    }
+}
+.payment-btn .button {
+    display: inline-block;
+    background-color: #ff6347; /* Tomato color */
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.payment-btn .button:hover {
+    background-color: #ffffff; /* Invert colors on hover */
+    color: #ff6347;
+    border: 2px solid #ff6347;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.payment-btn .button:active {
+    background-color: #e5533b;
+    color: #ffffff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transform: scale(0.98);
+}
+/* Centering the cart summary and payment form */
+.cart-summary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically if there's enough space */
+    text-align: center; /* Centers the text within the container */
+    margin-top: 20px; /* Optional: Adds space at the top */
+}
+
+/* Styling for the cart summary */
+.cart-summary {
+    margin-bottom: 15px;
+}
+
+/* Style for the payment method section */
+.payment-method {
+    margin-bottom: 15px;
+}
+
+/* Style for the proceed button */
+.proceed-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green color for the button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Button hover effect */
+.proceed-btn:hover {
+    background-color: #45a049;
+}
+/* Align text to the center */
+.order-summary {
+    text-align: center;
+}
+
+/* Optional: Center the entire container horizontally */
+.order-summary__container {
+    margin: 0 auto;
+    width: 80%; /* Adjust the width as needed */
+}
+
+/* Optional: Add some spacing */
+.cart-summary p {
+    margin: 10px 0;
+}
+.payment-method {
+    display: flex;
+    justify-content: center; /* Center the labels horizontally */
+    align-items: center; /* Center the labels vertically */
+    gap: 20px; /* Optional: Adds space between the radio buttons */
+    text-align: center; /* Ensures the text inside the labels is centered */
+}
+
+.payment-method label {
+    display: flex;
+    align-items: center; /* Vertically aligns the radio button with the text */
+    justify-content: center; /* Horizontally centers the radio button and text */
+    font-size: 16px; /* Optional: Adjust font size */
+}
+
+.payment-method input[type="radio"] {
+    margin-right: 8px; /* Adds some space between the radio button and text */
+}
+.payment-summary {
+    display: flex;
+    justify-content: center; /* Horizontally centers the button */
+    align-items: center; /* Vertically centers the button */
+    margin-top: 20px; /* Optional: Adds space above the button */
+}
+
+#proceed-payment {
+    padding: 10px 20px; /* Optional: Adds padding to the button */
+    font-size: 16px; /* Optional: Adjusts font size */
+    background-color: #4CAF50; /* Optional: Changes button color */
+    color: white; /* Optional: Text color */
+    border: none; /* Optional: Removes border */
+    cursor: pointer; /* Optional: Adds a pointer cursor */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+#proceed-payment:hover {
+    background-color: #45a049; /* Optional: Changes button color on hover */
+}
+
+
+
+

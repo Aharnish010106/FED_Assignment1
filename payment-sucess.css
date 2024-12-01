@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+}
+
+.payment-success h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.payment-success p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
